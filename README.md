@@ -39,10 +39,10 @@ A React application that integrates with the Reqres API to perform basic user ma
 ```bash
 git clone https://github.com/yourusername/reqres-user-management.git
 cd reqres-user-management
-Install dependencies:
 ```
 
 ```bash
+Install dependencies:
 npm install
 ```
 
@@ -61,28 +61,6 @@ Email: eve.holt@reqres.in
 
 Password: cityslicka
 
-📁 Project Structure
-pgsql
-Copy
-Edit
-src/
-├── components/
-│   ├── Auth/
-│   │   └── Login.jsx
-│   ├── Users/
-│   │   ├── UserList.jsx
-│   │   ├── UserCard.jsx
-│   │   └── EditUserForm.jsx
-│   └── UI/
-│       ├── Navbar.jsx
-│       ├── Pagination.jsx
-│       └── Loader.jsx
-├── contexts/
-│   └── AuthContext.jsx
-├── services/
-│   └── api.js
-├── App.js
-└── index.js
 📚 API Reference
 This application uses the Reqres API with the following endpoints:
 
