@@ -37,7 +37,7 @@ A React application that integrates with the Reqres API to perform basic user ma
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/reqres-user-management.git
+git clone https://github.com/kishan-25/reqres-user-management.git
 cd reqres-user-management
 ```
 
