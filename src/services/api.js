@@ -1,9 +1,8 @@
-// src/services/api.js
 import axios from 'axios';
 
 const BASE_URL = 'https://reqres.in/api';
 
-// Create axios instance
+// axios instance
 const api = axios.create({
   baseURL: BASE_URL,
   headers: {

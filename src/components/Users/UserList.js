@@ -1,5 +1,3 @@
-
-// src/components/Users/UserList.jsx
 import React, { useState, useEffect } from 'react';
 import { getUsers, deleteUser } from '../../services/api';
 import UserCard from './UserCard';
