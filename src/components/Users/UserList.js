@@ -15,7 +15,6 @@ const UserList = () => {
     total: 0,
     per_page: 6
   });
-  const [searchTerm, setSearchTerm] = useState('');
   const [editingUser, setEditingUser] = useState(null);
 
   const fetchUsers = async (page = 1) => {
@@ -61,43 +60,10 @@ const UserList = () => {
     setEditingUser(user);
   };
 
-  const handleSearchChange = (e) => {
-    setSearchTerm(e.target.value);
-  };
-
-  const filteredUsers = users.filter(user => {
-    const fullName = `${user.first_name} ${user.last_name}`.toLowerCase();
-    return fullName.includes(searchTerm.toLowerCase()) || 
-           user.email?.toLowerCase().includes(searchTerm.toLowerCase());
-  });
-
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold text-gray-800">User Management</h1>
-        <div className="relative">
-          <input
-            type="text"
-            placeholder="Search users..."
-            value={searchTerm}
-            onChange={handleSearchChange}
-            className="pl-8 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          <svg
-            className="w-5 h-5 absolute left-2 top-3 text-gray-400"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
-        </div>
       </div>
 
       {loading ? (
@@ -105,8 +71,8 @@ const UserList = () => {
       ) : (
         <>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredUsers.length > 0 ? (
-              filteredUsers.map(user => (
+            {users.length > 0 ? (
+              users.map(user => (
                 <UserCard
                   key={user.id}
                   user={user}
